@@ -7,29 +7,17 @@ namespace VisualBasicUpgradeAssistant.Core.Model.Tests
     [TestClass()]
     public class ConvertCodeTests
     {
-        [TestMethod]
-        public void ClassStandardVarableTest()
+        [DataTestMethod]
+        [DataRow("Public foo As String", "public", "String", "foo")]
+        [DataRow("Public foo As New Bar", "public", "Bar", "new Bar()")]
+        public void ClassStandardVarableTest(String line, String scope, String type, String name)
         {
             ConvertCode convertCode = new ConvertCode();
 
-            String line = "Public foo As String";
             Variable result = convertCode.ParseVariableDeclaration(line);
-            Assert.AreEqual("foo", result.Name);
-            Assert.AreEqual("String", result.Type);
-            Assert.AreEqual("public", result.Scope);
-            Assert.AreEqual(null, result.Comment);
-        }
-
-        [TestMethod]
-        public void ClassNewVariableTest()
-        {
-            ConvertCode convertCode = new ConvertCode();
-
-            String line = "Public foo As New Bar";
-            Variable result = convertCode.ParseVariableDeclaration(line);
-            Assert.AreEqual("foo", result.Name);
-            Assert.AreEqual("new Bar()", result.Type);
-            Assert.AreEqual("public", result.Scope);
+            Assert.AreEqual(name, result.Name);
+            Assert.AreEqual(type, result.Type);
+            Assert.AreEqual(scope, result.Scope);
             Assert.AreEqual(null, result.Comment);
         }
     }
