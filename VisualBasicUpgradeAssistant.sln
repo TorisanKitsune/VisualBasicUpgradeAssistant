@@ -3,15 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualBasicUpgradeAssistant.Core", "src\VisualBasicUpgradeAssistant.Core\VisualBasicUpgradeAssistant.Core.csproj", "{F99A9CBB-4D3B-4363-82CE-BB69F42F41A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualBasicUpgradeAssistant.Core", "VisualBasicUpgradeAssistant.Core\VisualBasicUpgradeAssistant.Core.csproj", "{F99A9CBB-4D3B-4363-82CE-BB69F42F41A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualBasicUpgradeAssistant.Core.Test", "test\VisualBasicUpgradeAssistant.Core.Test\VisualBasicUpgradeAssistant.Core.Test.csproj", "{84394ABA-C4F7-4C48-8887-87FB5D634CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualBasicUpgradeAssistant.Core.Test", "VisualBasicUpgradeAssistant.Core.Test\VisualBasicUpgradeAssistant.Core.Test.csproj", "{84394ABA-C4F7-4C48-8887-87FB5D634CF2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualBasicUpgradeAssistant.Wpf", "src\VisualBasicUpgradeAssistant.Wpf\VisualBasicUpgradeAssistant.Wpf.csproj", "{2C32F1C1-C9B8-4E7E-9B0C-DEF5F7450C5C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{C09EFDA0-ECD7-4141-8E73-E487208D0553}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{9833BA7B-D1F7-4418-B03D-CC85089D80C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VisualBasicUpgradeAssistant.Wpf", "VisualBasicUpgradeAssistant.Wpf\VisualBasicUpgradeAssistant.Wpf.csproj", "{2C32F1C1-C9B8-4E7E-9B0C-DEF5F7450C5C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D9424C5B-7336-4538-9646-8F68B701807D}"
 	ProjectSection(SolutionItems) = preProject
@@ -110,11 +106,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{F99A9CBB-4D3B-4363-82CE-BB69F42F41A7} = {C09EFDA0-ECD7-4141-8E73-E487208D0553}
-		{84394ABA-C4F7-4C48-8887-87FB5D634CF2} = {9833BA7B-D1F7-4418-B03D-CC85089D80C9}
-		{2C32F1C1-C9B8-4E7E-9B0C-DEF5F7450C5C} = {C09EFDA0-ECD7-4141-8E73-E487208D0553}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1B8C204F-4F63-44E8-B3B0-E0D20394BC27}

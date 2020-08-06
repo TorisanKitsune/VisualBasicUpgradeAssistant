@@ -479,8 +479,7 @@ namespace VisualBasicUpgradeAssistant.Core.Model
 
                             default:
                                 // variable declaration
-                                variable = new Variable();
-                                ParseVariableDeclaration(variable, line);
+                                variable = ParseVariableDeclaration(line);
                                 bVariable = true;
                                 break;
                         }
@@ -489,12 +488,9 @@ namespace VisualBasicUpgradeAssistant.Core.Model
 
                     case "Dim":
                         // variable declaration
-                        variable = new Variable
-                        {
-                            Comment = comments
-                        };
+                        variable = ParseVariableDeclaration(line);
+                        variable.Comment = comments;
                         comments = String.Empty;
-                        ParseVariableDeclaration(variable, line);
                         bVariable = true;
                         break;
 
@@ -597,8 +593,9 @@ namespace VisualBasicUpgradeAssistant.Core.Model
 
         //Private mlID As Long
 
-        private void ParseVariableDeclaration(Variable variable, String line)
+        public Variable ParseVariableDeclaration(String line)
         {
+            Variable variable = new Variable();
             String TempString = String.Empty;
             Int32 iPosition = 0;
             Boolean Status = false;
@@ -638,6 +635,8 @@ namespace VisualBasicUpgradeAssistant.Core.Model
             iPosition++;
             TempString = GetWord(line, ref iPosition);
             variable.Type = TempString;
+
+            return variable;
         }
 
         // properties Let, Get, Set
